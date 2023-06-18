@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons (click)="cerrarsesion(user)" slot="end">
+      <ion-icon name="log-in-outline" style="height: 30px; width: 30px;"></ion-icon>
+      <ion-button ></ion-button>
+    </ion-buttons>
+    <img src="../assets/icon/logo.png" style="width: 240px; height: 40px;" class="center" alt="">
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+
+  <ion-slides [options]="option" style="cursor: pointer;margin-top: 30px;">
+    <ion-slide *ngFor="let item of games">
+      <ion-card>
+        <img src="{{ item.imagen }}" style="width: 460px; height: 150px;">
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+
+  <div class="center" style="padding-top: 30px;padding-bottom: 30px;">
+    <ion-chip [routerLink]="['/soporte']">
+      <ion-label >Acción</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label style="font-size:10px;">Aventura</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label >Battle Royale</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label>Carrera</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label>Shooter</ion-label>
+    </ion-chip>
+  </div>
+
+  <ion-card-title>
+    Recomendaciones para ti
+  </ion-card-title>
+
+  <ion-slides [options]="option" style="cursor: pointer;z-index: -2;">
+    <ion-slide *ngFor="let item of game">
+      <ion-card>
+
+        <img src="{{ item.imagen }}" style="width: 460px; height: 150px;">
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+ 
+  <ion-tabs style="position: fixed;bottom: 0; left: 0;">
+    <ion-tab-bar color="dark" slot="bottom">
+
+      <!-- <ion-tab-button (click)="categorias()" tab="schedule">
+        <ion-icon name="layers-outline"></ion-icon>
+        <ion-label style="font-size: 11px;">Categorias</ion-label>
+      </ion-tab-button> -->
+      <ion-tab-button (click)="perfil()" tab="speakers">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="normas()" tab="map">
+        <ion-icon name="school-outline"></ion-icon>
+        <ion-label>Normas</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button (click)="nosotros()" tab="about">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>Nosotros</ion-label>
+      </ion-tab-button>
+
+      <div *ngFor="let item of user" style="padding-right: 10px;">
+        <ion-tab-button *ngIf="item.id_tipo_user == 1" (click)="soporte()" class="icon">
+          <ion-icon color="medium" name="settings"></ion-icon>
+          <ion-label color="medium">Soporte</ion-label>
+        </ion-tab-button>
+      </div>
+      <!-- <ion-tab-button (click)="cerrarsesion(user)" tab="schedule">
+        <ion-icon name="person-remove-outline"></ion-icon>
+        <ion-label>Cerrar sesion</ion-label>
+      </ion-tab-button> -->
+
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>

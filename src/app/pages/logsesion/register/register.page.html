@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Crear cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+
+
+  <div class="form" action="">
+
+    <div class="form-control">
+      <ion-label>RUT:</ion-label>
+      <input [(ngModel)]="nuevoUser.id_rut" minlength="8" type="text" placeholder="Sin puntos ni guion" maxlength="9">
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <ion-label>Nombre de usuario:</ion-label>
+      <input [(ngModel)]="nuevoUser.nickname" minlength="5" type="text" placeholder="Debe ingresar un nombre de usuario"/>
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Nombres:</ion-label>
+      <input [(ngModel)]="nuevoUser.nombres" minlength="10" type="text" placeholder="Debe ingresar sus nombres" />
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Apellidos:</ion-label>
+      <input [(ngModel)]="nuevoUser.apellidos" type="text" placeholder="Debe ingresar sus Apellidos" />
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Fecha de nacimiento:</ion-label>
+      <ion-datetime style="color: black;background-color: white;" [(ngModel)]="nuevoUser.fecha_nac" displayFormat="D MMM YYYY" max="2004"></ion-datetime>
+      <small>Error message</small>
+      <label style="color: white;" *ngIf="nuevoUser.fecha_nac">La fecha seleccionada es: {{ nuevoUser.fecha_nac | date:"dd-MM-yyyy" }}</label>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Dirección de correo electrónico:</ion-label>
+      <input [(ngModel)]="nuevoUser.email" type="email" placeholder="Debe ingresar su correo electrónico" />
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Contraseña</ion-label>
+      <input [(ngModel)]="nuevoUser.password" minlength="4" type="password" placeholder="Debe ingresar una contraseña" minlength="4" />
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <ion-label>Repetir Contraseña</ion-label>
+      <input [(ngModel)]="nuevoUser.password2" minlength="4" type="password" placeholder="Repita la contraseña anterior" />
+      <small>Error message</small>
+    </div>
+
+    <ion-button (click)="confirmar()" type="submit" class="botons" expand="full"color="dark">Registrar cuenta</ion-button>
+
+  </div>
+</ion-content>

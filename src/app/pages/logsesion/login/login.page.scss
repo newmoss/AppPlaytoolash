@@ -1,0 +1,42 @@
+//FONDO DE PÁGINA
+ion-content.fondo{
+  --background: linear-gradient(
+    90deg
+  , rgb(24, 49, 87) 0%, rgba(101, 205, 219, 0.961) 100%);
+}
+
+.tamanno{
+  margin-top: 80px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// CSS CASILLAS DE INICIO SE SESIÓN
+.casillas{
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+  width: 260px;
+  height: 65;
+
+}
+//ESPACIO ENTRE FORMULARIO Y IMAGEN
+.bordetop{
+  margin-top: 20px;
+}
+//CSS BOTÓN
+.botons{
+  margin-top: 8;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  width: 280px;
+  height: 65;
+
+}
+
+.toast-wrapper.toast-bottom{
+  --background:white;
+}

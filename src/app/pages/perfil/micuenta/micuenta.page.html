@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="perfil()"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Mi cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+
+  <div class="circimg" style="margin-top: 25px;">
+    <img *ngIf="image" [src]="image" alt="image" class="circimg">
+    <img *ngIf="!image" src="../assets/icon/hongo.png" alt="">
+  </div>
+
+  <div class="form" action="" style="padding-top: 50px;">
+    <h2 style="color: white;text-align: center;text-transform: uppercase">{{ user.nickname}}</h2>
+
+    <div class="form-control">
+      <ion-label>Nombre:</ion-label>
+      <input disabled [(ngModel)]="user.nombre" minlength="10" type="text" />
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Apellido:</ion-label>
+      <input disabled [(ngModel)]="user.apellidos" type="text" />
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Dirección de correo electrónico:</ion-label>
+      <input disabled [(ngModel)]="user.email" type="email" />
+      <small>Error message</small>
+    </div>
+
+
+  </div>
+
+
+</ion-content>

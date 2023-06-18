@@ -1,0 +1,18 @@
+//FONDO DE PÁGINA
+ion-content.fondo{
+    --background: linear-gradient(
+      90deg
+    , rgb(24, 49, 87) 0%, rgba(101, 205, 219, 0.961) 100%);
+  }
+  ion-item{
+    h2{
+      color: white;
+    }
+    p{
+      color: whitesmoke;
+    }
+    border: 5px white;
+  --background: linear-gradient(
+    90deg
+  , rgb(24, 49, 87) 0%, rgba(101, 205, 219, 0.961) 100%);
+}

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../assets/icon/logo.png" style="width: 240px; height: 40px;" class="center" alt="">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo" [fullscreen]="true">
+
+  <ion-card color="dark"
+    style="margin-top: 5px; margin-bottom: 10px; margin-right: 10px; margin-left: 10px;border-radius: 20px;">
+    <img height="auto" src="{{ juego.imagen }}" style="margin-top: 10px;" class="center">
+    <ion-card-content>
+
+      <ion-card-title [(ngModel)]="juego" style="text-align: center;">
+        {{ juego.nombre }}
+      </ion-card-title>
+      <p style="text-align: center; font-size: 13px;">FECHA DE LANZAMIENTO: {{ juego.fecha_lanz | date:"dd-MM-yyyy" }}
+      </p>
+
+      <div style="text-align: center; margin-bottom: 10px;">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
+        <ion-icon name="star-outline"></ion-icon>
+      </div>
+      <br>
+      <ion-card-subtitle style="text-transform: uppercase;">Descripcion: </ion-card-subtitle>
+      <p style="text-align: justify; font-size: 14px;">{{ juego.descripcion }}</p>
+      <br>
+      <ion-card-subtitle style="text-transform: uppercase;">Desarrollador: </ion-card-subtitle>
+      <p style="text-align: justify; font-size: 14px;">{{ juego.editor }}</p>
+      <br>
+      <ion-card-subtitle style="text-transform: uppercase;">Plataforma: </ion-card-subtitle>
+      <p style="text-align: justify; font-size: 14px;">{{ juego.plataforma }}</p>
+
+      <ion-item color=" dark">
+        <ion-avatar slot="start">
+          <img src="assets/icon/hongo.png">
+        </ion-avatar>
+        <ion-card-subtitle style="text-transform: uppercase;color: white;padding-top: 7px;size: 20px;">{{
+          user.nickname}} </ion-card-subtitle>
+      </ion-item>
+
+      <div class="form" action="" style="border: 1px solid white;border-radius: 10px;">
+        <textarea [(ngModel)]="resena.resennia" class="textarea" style="color: black; margin-top: 10px;"></textarea>
+        <ion-button style="margin-left: 20px;padding-bottom: 10px;" (click)="enviar()">Enviar reseña</ion-button>
+      </div>
+
+
+      <div style="padding-top: 15px;" *ngFor="let item of lista">
+        <ion-card *ngIf="item.juego_id_juego == juego.id" class="fondo">
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="assets/icon/hongo.png">
+            </ion-avatar>
+            <ion-card-subtitle style="text-transform: uppercase;color: white;padding-top: 7px;size: 20px;">{{
+              item.usuario_id_rut}} </ion-card-subtitle>
+          </ion-item>
+          <textarea disabled [(ngModel)]="item.resennia" class="textarea"
+            style="color: white; margin-top: 5px;"></textarea>
+          <p style="text-align: justify; font-size: 14px; text-align: end; padding-right: 22px;padding-top: 7px;">
+            PUBLICADA EL {{ item.fecha_resennia | date:"dd-MM-yyyy" }}</p>
+        </ion-card>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

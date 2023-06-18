@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="perfil()"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+
+  <div class="circimg" style="margin-top: 25px;">
+    <img *ngIf="image" [src]="image" alt="image" class="circimg">
+    <img *ngIf="!image" src="../assets/icon/hongo.png" alt="">
+  </div>
+
+  <div class="form" action="" style="padding-top: 50px;">
+
+    <h2 style="color: white;">Actualizar contraseña</h2>
+
+    <div class="form-control">
+      <ion-label>Contraseña actual:</ion-label>
+      <input [(ngModel)]="oldPass" minlength="4" type="password" placeholder="Ingresar contraseña actual"
+        minlength="4" />
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <ion-label>Contraseña nueva:</ion-label>
+      <input [(ngModel)]="newPass" minlength="4" type="password" placeholder="Ingresar nueva contraseña"
+        minlength="4" />
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <ion-label>Repetir contraseña nueva:</ion-label>
+      <input [(ngModel)]="reNewPass" minlength="4" type="password" placeholder="Confirmar nueva contraseña" />
+      <small>Error message</small>
+    </div>
+
+    <ion-button (click)="guardar(user)" style="margin-top: 50px;display: flex;" type="submit" color="medium">Cambiar
+      contraseña
+    </ion-button>
+
+  </div>
+
+
+</ion-content>

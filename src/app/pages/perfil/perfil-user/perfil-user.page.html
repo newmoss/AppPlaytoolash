@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/home']"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Mi Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+
+  <div class="circimg" style="margin-top: 25px;">
+    <img *ngIf="image" [src]="image" alt="image" class="circimg">
+    <img *ngIf="!image" src="../assets/icon/hongo.png" alt="">
+  </div>
+
+  <div class="form" action="" style="padding-top: 50px; padding-bottom: 25px;">
+    <h2 style="color: white;text-align: center;text-transform: uppercase">{{ user.nickname}}</h2>
+
+
+    <div>
+      <ion-button style="margin-right: auto;margin-left: auto;display: flex;width: 200px;" (click)="takePicture()">Tomar
+        foto</ion-button>
+      <ion-button style="margin-right: auto;margin-left: auto;display: flex;width: 200px;" (click)="uploadPicture()">
+        Subir foto</ion-button>
+      <!-- <img *ngIf="image" [src]="image" alt="image" style="width: 100%;max-width: 250px;"> -->
+    </div>
+
+  </div>
+  
+  <ion-item (click)="micuenta()" style="color: whitesmoke;">
+    <ion-icon style="color: whitesmoke;" name="chevron-forward-outline" slot="end"></ion-icon> Mi cuenta
+  </ion-item>
+  <ion-item (click)="perfilpass()" style="color: whitesmoke;">
+    <ion-icon style="color: whitesmoke;" name="chevron-forward-outline" slot="end"></ion-icon> Cambiar contraseña
+  </ion-item>
+  <ion-item (click)="borrar()" style="color: whitesmoke;">
+    <ion-icon style="color: whitesmoke;" name="chevron-forward-outline" slot="end"></ion-icon> Eliminar cuenta
+  </ion-item>
+  <ion-item (click)="cerrarsesion(user)" style="color: whitesmoke;">
+    <ion-icon style="color: whitesmoke;" name="chevron-forward-outline" slot="end"></ion-icon> Cerrar sesión
+  </ion-item>
+
+  <p style="color:lightgrey;padding-left: 20px;padding-top: 20px;">Versión: 2.2.2.45075</p>
+</ion-content>

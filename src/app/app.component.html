@@ -1,0 +1,58 @@
+<ion-app>
+
+  <ion-menu menuID="main-menu" contentId="main">
+    <ion-content class="fondo">
+      <div class="menu-header-bg"></div>
+      <ion-menu-toggle auto-hide="true">
+        <div (click)="home()" class="header-content">
+          <img src="../assets/icon/hongo.png" alt="">
+          <ion-label>
+            <h2>Playtoolash</h2>
+            <p></p>
+          </ion-label>
+        </div>
+      </ion-menu-toggle>
+      <br>
+      <ion-list color="dark" class="menu-items" lines="none">
+        <ion-menu-toggle auto-hide="true">
+
+          <ion-item color="dark" (click)="home()" style="cursor: pointer;">
+            <ion-icon name="home"></ion-icon>Inicio
+          </ion-item>
+
+        </ion-menu-toggle>
+      </ion-list>
+
+      <br><br>
+
+      <ion-list color="dark" class="menu-items" lines="none">
+        <ion-menu-toggle auto-hide="true">
+
+          <ion-item color="dark" (click)="accion()" style="cursor: pointer;">
+            <ion-icon name="flame"></ion-icon>Acción
+          </ion-item>
+
+          <ion-item color="dark" (click)="aventura()" style="cursor: pointer;">
+            <ion-icon name="planet"></ion-icon>Aventura
+          </ion-item>
+
+          <ion-item color="dark" (click)="br()" style="cursor: pointer;">
+            <ion-icon name="skull"></ion-icon>Battle Royale
+          </ion-item>
+
+          <ion-item color="dark" (click)="carreras()" style="cursor: pointer;">
+            <ion-icon name="car-sport"></ion-icon>Carreras
+          </ion-item>
+
+          <ion-item color="dark" (click)="shooter()" style="cursor: pointer;">
+            <ion-icon name="locate"></ion-icon>Shooter
+          </ion-item>
+
+        </ion-menu-toggle>
+      </ion-list>
+      <br><br>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

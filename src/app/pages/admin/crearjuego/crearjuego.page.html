@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title [routerLink]="['/soporte']" style="text-align: center;">Agregar juego</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <div class="form" action="">
+
+    <div class="form-control">
+      <ion-label>Titulo:</ion-label>
+      <input [(ngModel)]="nuevoGame.nombre" minlength="5" type="text" maxlength="20">
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <ion-label>Categoria:</ion-label>
+      <ion-select class="form-control" [(ngModel)]="nuevoGame.id_categoria" style="color: white;"
+        placeholder="Seleccione categoria" type="Text" minlength="4" required>
+        <ion-select-option value="1">Acción</ion-select-option>
+        <ion-select-option value="2">Aventura</ion-select-option>
+        <ion-select-option value="3">Battle Royale</ion-select-option>
+        <ion-select-option value="4">Carreras</ion-select-option>
+        <ion-select-option value="5">Shooter</ion-select-option>
+      </ion-select>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Fecha de lanzamiento:</ion-label>
+      <ion-datetime style="color: black;background-color: white;" [(ngModel)]="nuevoGame.fecha_lanz"
+        displayFormat="D MMM YYYY"></ion-datetime>
+      <small>Error message</small>
+      <label style="color: white;" *ngIf="nuevoGame.fecha_lanz">La fecha seleccionada es: {{ nuevoGame.fecha_lanz |
+        date:"dd-MM-yyyy" }}</label>
+    </div>
+    <div class="form-control">
+      <ion-label>Descripcion:</ion-label>
+      <textarea [(ngModel)]="nuevoGame.descripcion"></textarea>
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Desarrollador:</ion-label>
+      <input [(ngModel)]="nuevoGame.editor" minlength="10" type="text" />
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Plataforma:</ion-label>
+      <input [(ngModel)]="nuevoGame.plataforma" type="text" />
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <ion-label>Imagen:</ion-label>
+      <input [(ngModel)]="nuevoGame.imagen" minlength="5" type="text">
+      <small>Error message</small>
+    </div>
+
+    <ion-button (click)="crear()" type="submit" class="botons" expand="full" color="dark">Registrar juego</ion-button>
+
+  </div>
+
+</ion-content>

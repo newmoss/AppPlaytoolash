@@ -1,0 +1,107 @@
+
+//FONDO DE PÁGINA
+ion-content.fondo{
+  --background: linear-gradient(
+    90deg
+  , rgb(24, 49, 87) 0%, rgba(101, 205, 219, 0.961) 100%);
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto ;
+  display: flex;
+}
+
+ion-card {
+  width: max-content;
+  height: max-content;
+  box-shadow: none;
+  border-radius: 12px;
+  border: #222428 solid 2px;
+  //#222428
+  
+  ion-card.img {
+      object-fit: cover;
+      width:max-content;
+      height: max-content;
+      transform: scale(1.1, 1.1) rotate(1deg);
+      transition: 600ms all ease-in-out;
+  }
+}
+h1{
+  font-size:20px;
+  text-align: center;
+  margin-top: 10px; 
+  color: white;
+  font-family: fantasy;
+}
+h2{
+  margin-left: 40px;
+  margin-top: 10px; 
+  font-size: 19px;
+  color: white;
+  text-align: start;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ion-card-title{
+  margin-left: 35px;
+  margin-top: 10px; 
+  font-size: 16px;
+  color:lightgrey;
+  text-align: start;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.swiper-slide-active {
+  transform: scale(1.1, 1.1);
+
+  ion-card {
+      img {
+          transform: scale(1.1);
+      }
+  }
+}
+
+.swiper-slide {
+  transition: 400ms all ease-in-out;
+}
+
+.P{
+  color: black;
+}
+
+
+.color{
+  background: black;
+
+}
+
+//Tabs
+ion-tab-bar.fondo{
+  --background: linear-gradient(
+    90deg
+    , rgb(30, 32, 35) 0%, rgb(53, 66, 88) 100%);
+}
+
+
+ion-chip{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  --background: linear-gradient(
+    90deg
+    , rgb(30, 32, 35) 0%, rgb(53, 66, 88) 100%);
+  height: 70px;
+  width: 70px;
+  color: whitesmoke;
+  font-size: 12px;
+  font-weight:bold;
+  word-wrap: break-word; 
+  white-space: normal;
+  text-align: center;
+  border: gray solid 1.5px;
+  margin-left: auto;
+  margin-right: auto ;
+  display: flex;
+
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Playtoolash",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

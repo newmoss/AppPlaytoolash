@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Modificar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+
+  <div class="form" action="">
+    <div class="form-control">
+      <ion-label>Titulo:</ion-label>
+      <input [(ngModel)]="juego.nombre" minlength="5" type="text" maxlength="20">
+      <small>Error message</small>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Categoria:</ion-label>
+      <ion-select style="background-color: white;" [(ngModel)]="juego.id_categoria" placeholder="Seleccione categoria"
+        type="Text" minlength="4" required>
+        <ion-select-option value="1">Acción</ion-select-option>
+        <ion-select-option value="2">Aventura</ion-select-option>
+        <ion-select-option value="3">Battle Royale</ion-select-option>
+        <ion-select-option value="4">Carreras</ion-select-option>
+        <ion-select-option value="5">Shooter</ion-select-option>
+      </ion-select>
+    </div>
+
+    <div class="form-control">
+      <ion-label>Fecha de lanzamiento:</ion-label>
+      <input [(ngModel)]="juego.fecha_lanz" type="date">
+      <small>Error message</small>
+      <label style="color: white;" *ngIf="juego.fecha_lanz">La fecha seleccionada es: {{ juego.fecha_lanz |
+        date:"dd-MM-yyyy" }}</label>
+    </div>
+    <div class="form-control">
+      <ion-label>Descripcion:</ion-label>
+      <textarea [(ngModel)]="juego.descripcion"></textarea>
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <ion-label>Editor:</ion-label>
+      <input [(ngModel)]="juego.editor" minlength="10" type="text" />
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <ion-label>Plataforma:</ion-label>
+      <input [(ngModel)]="juego.plataforma" type="text" />
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <ion-label>Imagen:</ion-label>
+      <input [(ngModel)]="juego.imagen" type="text" />
+      <small>Error message</small>
+    </div>
+    <ion-button (click)="editar()" type="submit" class="botons" expand="full" color="dark">Modificar juego</ion-button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <img src="../assets/imgmenu/cataventura.png" style="width: 240px; height: 40px;border-radius: 20px;" class="center" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+
+  <ion-card *ngFor="let item of Juego" class="colorcard" style="cursor: pointer;" (click)="descripcion(item)">
+    <ion-card-header>
+      <img class="center" src="{{ item.imagen }}">
+      <ion-card-title class="titulo">{{ item.nombre }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

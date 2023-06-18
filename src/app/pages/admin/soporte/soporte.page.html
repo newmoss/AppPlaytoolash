@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Soporte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  
+  <ion-item-sliding style="margin-top: 4%;">
+      <ion-label (click)="listauser()" >
+        <h2 style="color: white;text-align: center;margin: 35px 35px;font-family:initial;">Usuarios del sistema</h2>
+        <!-- word-wrap para los cortes entre palabras  white-space para que aparezca todo el texto en varias lineas y no se corte-->
+        <p style="word-wrap: break-word; white-space: normal;"> </p>
+        <p style="word-wrap: break-word; white-space: normal;"></p>
+      </ion-label>
+
+      <ion-label (click)="crearus()" >
+        <h2 style="color: white;text-align: center;margin: 35px 35px;font-family:initial;">Agregar nuevo usuario</h2>
+      </ion-label>
+
+      <ion-label (click)="listajuego()" >
+        <h2 style="color: white;text-align: center;margin: 35px 35px;font-family:initial;">Juegos</h2>
+      </ion-label>
+
+      <ion-label (click)="crearjuego()" >
+        <h2 style="color: white;text-align: center;margin: 35px 35px;font-family:initial;">Agregar nuevo juego</h2>
+      </ion-label>
+      <ion-label (click)="listares()" >
+        <h2 style="color: white;text-align: center;margin: 35px 35px;font-family:initial;">Reseñas</h2>
+      </ion-label>
+
+      <h2 class="buton"style="text-align: center;" (click)="cerrarsesion(user)">Cerrar sesion</h2>
+  </ion-item-sliding>
+
+</ion-content>

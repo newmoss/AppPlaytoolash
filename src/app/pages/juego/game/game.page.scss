@@ -1,0 +1,53 @@
+ion-content.fondo{
+  --background: linear-gradient(#4671EA, #AC34E7);
+
+}
+.center{
+  margin-left: auto;
+  margin-right: auto ;
+  display: flex;
+}
+.textarea{
+  margin-left: auto;
+  margin-right: auto ;
+  display: flex;
+	width: 90%;
+	height: 100px;
+	padding: 15px;
+	border-radius: 5px;
+  outline: none;
+  resize: none;
+  border-color: black;
+	background-color: white;
+  }
+  .botons{
+    margin-left: 10px;
+  }
+  textarea:is(:focus, :valid){
+    border-color: black;
+    border-width: 2px;
+    padding: 14px;
+  }
+  textarea::-webkit-scrollbar{
+    width: 0px;
+  }
+
+  ion-card.fondo{
+    --background:#1b2838;
+    .textarea{
+      margin-left: auto;
+      margin-right: auto ;
+      display: flex;
+      width: 90%;
+      height: 90px;
+      padding: 15px;
+      border-radius: 5px;
+      outline: none;
+      resize: none;
+      border-color: white;
+      background-color: #1b2838;
+      }
+  }
+  ion-item{
+    --ion-background-color: #1b2838 !important;
+  }

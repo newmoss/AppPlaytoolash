@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Olvidaste tus datos?</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <ion-title style="color: whitesmoke;font-size: x-large;text-align: center;padding: 50px 50px;word-wrap: break-word; white-space: normal;">Recuperación de la
+    cuenta</ion-title>
+  <p
+    style="color: whitesmoke;text-align: center;word-wrap: break-word; white-space: normal;padding: 25px 25px;font-size: medium;">
+    Ingresa el correo electronico que recuerdes haber usado en esta cuenta
+  </p>
+
+  <ion-item class="casillas bordetop">
+    <ion-label position="floating">Correo Electronico</ion-label>
+    <ion-input [(ngModel)]="log.correo" type="email"required></ion-input>
+  </ion-item>
+
+  <ion-button class="botons" expand="full" type="Submit" color="dark" (click)="login()">
+    Restablecer contraseña
+  </ion-button>
+</ion-content>
