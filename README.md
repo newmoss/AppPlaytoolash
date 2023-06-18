@@ -1,2 +1,2 @@
 # AppPlaytoolash
- 
+ ### Playtoolash es una aplicación móvil desarrollada con Angular, Ionic y Cordova, que ofrece a los usuarios una plataforma completa para compartir reseñas de videojuegos. Con una interfaz intuitiva y características como reseñas detalladas, agregación de juegos y categorías, y perfiles de usuario, Playtoolash se convierte en una herramienta esencial para los amantes de los videojuegos que desean tomar decisiones informadas al comprar nuevos títulos.
